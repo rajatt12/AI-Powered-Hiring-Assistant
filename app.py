@@ -13,7 +13,7 @@ st.markdown("""
     """, unsafe_allow_html=True)
 
 st.title("TalentScout Hiring Assistant")
-st.caption("Initial Screening & Technical Assessment [cite: 8]")
+st.caption("Initial Screening & Technical Assessment")
 
 
 if "messages" not in st.session_state:
@@ -100,3 +100,4 @@ if st.session_state.step == "finished":
     data = json.dumps(st.session_state.candidate_info, indent=4)
 
     st.download_button("Download My Application (JSON)", data=data, file_name="talent_scout_application.json")
+
