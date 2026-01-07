@@ -69,53 +69,6 @@ Progress is displayed in sidebar using a Streamlit progress bar.
 
 ---
 
-## 3. Installation Instructions
-
-### Prerequisites
-
-- Python 3.10+  
-- Groq account API key  
-- Windows/Linux with Streamlit support
-
-### Steps
-
-1. Clone repository
-
-```bash
-git clone <YOUR_GITHUB_LINK>
-cd TalentScout_Assistant
-```
-
-2. Create virtual environment (optional)
-
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
-
-3. Install dependencies
-
-```bash
-pip install streamlit groq python-dotenv
-```
-
-4. Configure environment
-
-Create a `.env` file:
-
-```
-GROQ_API_KEY = your_key
-GROQ_API_KEY = llama-3.3-70b-versatile
-```
-
-5. Run application
-
-```bash
-streamlit run app.py
-```
-
----
-
 ## 4. Usage Guide
 
 ### Conversation Flow
