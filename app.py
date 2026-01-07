@@ -18,7 +18,7 @@ st.caption("Initial Screening & Technical Assessment [cite: 8]")
 
 if "messages" not in st.session_state:
     # Initial Greeting and Purpose Overview [cite: 20]
-    greeting = "Hello! I am the TalentScout Assistant. I'll collect your details and ask technical questions based on your stack[cite: 20]."
+    greeting = "Hello! I am the TalentScout Assistant. I'll collect your details and ask technical questions based on your stack."
     st.session_state.messages = [{"role": "assistant", "content": greeting}]
 if "candidate_info" not in st.session_state:
     st.session_state.candidate_info = {}
@@ -49,7 +49,7 @@ if prompt := st.chat_input("Type your message..."):
         with st.chat_message("user"):
             st.markdown(prompt)
         
-        exit_msg = "Thank you for your interest in TalentScout. The session has ended[cite: 46]."
+        exit_msg = "Thank you for your interest in TalentScout. The session has ended."
         st.session_state.messages.append({"role": "assistant", "content": exit_msg})
         with st.chat_message("assistant"):
             st.markdown(exit_msg)
@@ -98,4 +98,5 @@ if prompt := st.chat_input("Type your message..."):
 #DATA EXPORT
 if st.session_state.step == "finished":
     data = json.dumps(st.session_state.candidate_info, indent=4)
+
     st.download_button("Download My Application (JSON)", data=data, file_name="talent_scout_application.json")
