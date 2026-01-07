@@ -15,8 +15,8 @@ REQUIRED_FIELDS = [
 
 def analyze_sentiment_and_language(user_text):
     """
-    Bonus Feature: Sentiment Analysis[cite: 99].
-    Gauges candidate emotions to provide personalized responses[cite: 101].
+    Bonus Feature: Sentiment Analysis.
+    Gauges candidate emotions to provide personalized responses.
     """
     prompt = f"Analyze this text: '{user_text}'. Return ONLY a JSON with keys 'sentiment' (positive/neutral/negative) and 'language' (ISO code)."
     try:
@@ -31,7 +31,7 @@ def analyze_sentiment_and_language(user_text):
 
 def generate_technical_questions(tech_stack, experience):
     """
-    Generates 3-5 technical questions tailored to the candidate's stack[cite: 35, 37].
+    Generates 3-5 technical questions tailored to the candidate's stack.
     Personalized based on years of experience[cite: 101].
     """
     prompt = (
@@ -47,4 +47,5 @@ def generate_technical_questions(tech_stack, experience):
         )
         return response.choices[0].message.content
     except Exception as e:
+
         return f"Error generating questions: {str(e)}"
