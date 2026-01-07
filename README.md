@@ -94,9 +94,9 @@ Progress is displayed in sidebar using a Streamlit progress bar.
 ```
 ├── app.py                    → Streamlit UI & workflow
 ├── logic.py                  → REQUIRED_FIELDS list
-├── sentiment_logic.py        → analyze_sentiment_and_language()
-├── question_logic.py         → generate_technical_questions()
-└── meeting_notes.json        → simulated storage (optional)
+├── requirements.txt
+├── readme.md
+└── talent_scout_application.json        → simulated storage 
 ```
 
 ### Design Decisions
